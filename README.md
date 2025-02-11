@@ -50,7 +50,7 @@ docker-compose down
 ```
 
 
-### **Go Tədris Mənbələri**
+### **Golang Tədris Mənbələri**
 Go dilini öyrənmək üçün bəzi faydalı mənbələr:
 - [Go Rəsmi Sənədləri](https://go.dev/doc/)<br/>
   Go dilinə aid rəsmi sənədlər və təlimatlar.
