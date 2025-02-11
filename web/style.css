@@ -1,4 +1,4 @@
-/* Genel sayfa ayarları */
+/* Ümumi səhifə parametrləri*/
 body {
   font-family: Arial, sans-serif;
   background-color: #e0f2f1;
@@ -26,7 +26,7 @@ section {
   background-color: #ffffff;
 }
 
-/* Buton ayarları */
+/* Düymə parametrləri */
 button {
   background-color: #00796b;
   color: #ffffff;
@@ -41,7 +41,7 @@ button:hover {
   background-color: #004d40;
 }
 
-/* Sayfalama kontrolleri */
+/* Səhifələrə nəzarət */
 #pagination-controls {
   margin-bottom: 1rem;
 }

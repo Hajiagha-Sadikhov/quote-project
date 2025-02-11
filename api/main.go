@@ -7,23 +7,24 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
 	"github.com/rs/cors"
 )
 
-// Quote, her bir alıntıyı temsil eder.
+// Quote, hər bir sitatı təmsil edir.
 type Quote struct {
 	ID     int    `json:"id"`
 	Author string `json:"author"`
 	Text   string `json:"text"`
 }
 
-// quotes slice, JSON dosyasından yüklenecek alıntıları tutar.
+// quotes slice, JSON faylından yüklənəcək çıxarışları saxlayır.
 var quotes []Quote
 
-// Her sayfada gösterilecek alıntı sayısı.
+// Hər səhifədə göstəriləcək sitatların sayı.
 const pageSize = 10
 
-// loadQuotes, belirtilen dosyadan alıntıları yükler.
+// loadQuotes göstərilən fayldan sitatlar yükləyir.
 func loadQuotes(filename string) error {
 	file, err := os.Open(filename)
 	if err != nil {
@@ -35,8 +36,8 @@ func loadQuotes(filename string) error {
 	return decoder.Decode(&quotes)
 }
 
-// getQuotesHandler, GET /quotes endpoint'ini pagination desteğiyle işler.
-// ?page=n parametresini kontrol eder; belirtilmezse 1. sayfa kullanılır.
+// getQuotesHandler, GET /quotes endpoint'ini pagination dəstəyi ile işləyir.
+// ?page=n parametrini kontrol edər; qeyd olnumazsa 1. səyfə istifadə olunar.
 func getQuotesHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
@@ -52,7 +53,7 @@ func getQuotesHandler(w http.ResponseWriter, r *http.Request) {
 	start := (page - 1) * pageSize
 	end := start + pageSize
 
-	// Eğer başlangıç indeksi mevcut verinin dışında ise boş dizi döndür.
+	// Başlanğıc indeksi cari məlumatdan kənardırsa, boş massivi qaytarın.
 	if start >= len(quotes) {
 		json.NewEncoder(w).Encode([]Quote{})
 		return
@@ -65,11 +66,11 @@ func getQuotesHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(quotes[start:end])
 }
 
-// getQuoteByIDHandler, GET /quotes/{id} endpoint'ini işler.
+// getQuoteByIDHandler, GET /quotes/{id} endpoint'ini işlədər.
 func getQuoteByIDHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
-	// URL: /quotes/{id} şeklinde beklendiği için, id değeri path'den ayrıştırılır.
+	// URL: /quotes/{id} şəklində olduğu üçün, id dəğəri path'dan ayrılır.
 	pathParts := strings.Split(r.URL.Path, "/")
 	if len(pathParts) < 3 {
 		http.Error(w, "Invalid URL", http.StatusBadRequest)
@@ -82,7 +83,7 @@ func getQuoteByIDHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Alıntılar arasında id eşleşmesini arar.
+	// Sitatlar arasında id uyğunluqlarını axtarır.
 	for _, q := range quotes {
 		if q.ID == id {
 			json.NewEncoder(w).Encode(q)
@@ -90,11 +91,11 @@ func getQuoteByIDHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Eğer bulunamazsa 404 döndür.
+	// Əgər tapılmazsa 404 döndür.
 	http.Error(w, "Quote not found", http.StatusNotFound)
 }
 
-// router, gelen isteğe göre doğru handler'a yönlendirme yapar.
+// router, gələn istəyə görə doğru handler'a yönleədirmə edər.
 func router(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path == "/quotes" {
 		getQuotesHandler(w, r)
@@ -108,14 +109,14 @@ func router(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// quotes.json dosyasından alıntıları yükle.
+	// quotes.json faylından sitatları yüklə.
 	err := loadQuotes("quotes.json")
 	if err != nil {
 		log.Fatalf("Error loading quotes: %v", err)
 	}
 	log.Printf("Loaded %d quotes.", len(quotes))
 
-	// CORS middleware'ini ekle
+	// CORS middleware'ini əlavə et
 	mux := http.NewServeMux()
 	mux.HandleFunc("/quotes", router)
 	mux.HandleFunc("/quotes/", router)

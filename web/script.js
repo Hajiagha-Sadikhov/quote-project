@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let currentPage = 1;
 
-  // Rastgele alıntıyı API'den yükle.
+  // API-dən təsadüfi sitat yükləyin.
   function loadRandomQuote() {
-    // 1 ile 1000 arasında rastgele bir ID üretiyoruz.
+    // 1 ilə 1000 arasında təsadüfi ID yaradırıq.
     const randomID = Math.floor(Math.random() * 1000) + 1;
     fetch(`http://localhost:5000/quotes/${randomID}`)
       .then(response => {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-  // Belirtilen ID'ye göre alıntıyı arar.
+  // Göstərilən ID ilə sitat axtarır.
   function searchQuoteByID() {
     const id = quoteIdInput.value;
     if (!id) {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-  // Belirtilen sayfa numarasına göre alıntıları yükler.
+  // Göstərilən səhifə nömrəsinə əsasən sitatları yükləyir.
   function loadQuotesPage(page) {
     fetch(`http://localhost:5000/quotes?page=${page}`)
       .then(response => response.json())
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadQuotesPage(currentPage);
   });
 
-  // İlk yüklemeler
+  // İlk yükləmələr
   loadRandomQuote();
   loadQuotesPage(currentPage);
 });

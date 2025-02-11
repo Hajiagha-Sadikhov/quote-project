@@ -5,7 +5,7 @@ services:
     build: ./api
     ports:
       - "5000:5000"
-    # Geliştirme aşamasında eğer canlı güncelleme istemiyorsanız volume mount'u kaldırın.
+    # İnkişaf mərhələsindədir, əgər canlı yeniləmələri istəmirsinizsə, volume mount'u qaldırın.
     # volumes:
     #   - ./api:/app
   web:
