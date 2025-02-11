@@ -53,30 +53,32 @@ docker-compose down
 
 ### **Go Tədris Mənbələri**
 Go dilini öyrənmək üçün bəzi faydalı mənbələr:
-- [Go Rəsmi Sənədləri](https://go.dev/doc/)
+- [Go Rəsmi Sənədləri](https://go.dev/doc/)<br/>
   Go dilinə aid rəsmi sənədlər və təlimatlar.
 
-- [Go by Example](https://gobyexample.com/)
+- [Go by Example](https://gobyexample.com/)<br/>
   Go dilini nümunələr vasitəsilə öyrənmək üçün əla bir qaynaq.
 
-- [GoLang Təlimi by freeCodeCamp.org - YouTube](https://youtu.be/un6ZyFkqFKo?si=YdrLUV52lBoWbiOF)
+- [GoLang Təlimi by freeCodeCamp.org - YouTube](https://youtu.be/un6ZyFkqFKo?si=YdrLUV52lBoWbiOF)<br/>
   Go dili haqqında ətraflı video formatında məlumatlar.
 
 ---
 
 ### **Docker Tədris Mənbələri**
 Docker öyrənmək üçün aşağıdakı mənbələr faydalıdır:
-- [Docker Rəsmi Sənədləri](https://docs.docker.com/)
+- [Docker Rəsmi Sənədləri](https://docs.docker.com/)<br/>
   Docker-ın rəsmi sənədləri, konteynerlər və digər mövzular haqqında ətraflı məlumat.
 
-- [Docker Rəsmi Təlimatları](https://docs.docker.com/guides/)
+- [Docker Rəsmi Təlimatları](https://docs.docker.com/guides/)<br/>
   Docker ilə bağlı müxtəlif təlimatlar və ən yaxşı təcrübələr.
 
-- [Docker Tutorial for Beginners - YouTube](https://www.youtube.com/watch?v=fqMOX6JJhGo)
+- [Docker Tutorial for Beginners - YouTube](https://www.youtube.com/watch?v=fqMOX6JJhGo)<br/>
   Başlayanlar üçün Docker video formatında məlumatlar.
 
-- [Docker Mastery Kursu - Udemy](https://www.udemy.com/course/docker-mastery/)
+- [Docker Mastery Kursu - Udemy](https://www.udemy.com/course/docker-mastery/)<br/>
   Tətbiq inkişaf etdiriciləri üçün Docker-ın əsasları və necə istifadə edəcəyiniz haqqında faydalı məlumatlar.
+
+---
 
 ### **Nginx Üzrə Faydalı Mənbələr**
 
