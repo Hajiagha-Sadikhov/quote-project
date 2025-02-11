@@ -35,14 +35,14 @@ cd quote-project
 ```
 
 
-###To run the project using Docker Compose, follow these step.
+To run the project using Docker Compose, follow these step.
 ```bash
 
 docker-compose up --build
 
 ```
 
-###To stop the running containers, use the following command.
+To stop the running containers, use the following command.
 ```bash
 
 docker-compose down
