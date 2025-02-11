@@ -1,0 +1,26 @@
+# Go binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Vendor directory
+/vendor/
+
+# Dependency directories
+/go.sum
+/go.mod
+
+# IDE files
+.idea/
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Docker files
+.docker/

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./api
+    ports:
+      - "5000:5000"
+    # Geliştirme aşamasında eğer canlı güncelleme istemiyorsanız volume mount'u kaldırın.
+    # volumes:
+    #   - ./api:/app
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./web:/usr/share/nginx/html:ro

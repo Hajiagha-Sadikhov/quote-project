@@ -1,0 +1,28 @@
+# Golang resmi imajını kullanıyoruz (1.20 sürümü ve Alpine tabanlı)
+FROM golang:1.20-alpine
+
+
+# Çalışma dizinini ayarla
+WORKDIR /app
+
+# Go modül dosyalarını kopyala (öncelikli olarak bağımlılıkların önbelleğe alınması için)
+COPY go.mod ./
+
+# Eğer go.sum dosyanız varsa, onu da kopyalayın
+# COPY go.sum ./
+
+# Bağımlılıkları indir
+RUN go mod tidy
+RUN go get github.com/rs/cors
+
+# Tüm kaynak dosyalarını kopyala
+COPY . .
+
+# Binary oluştur (api adında)
+RUN go build -o api
+
+# Container içindeki port 5000'i expose et
+EXPOSE 5000
+
+# Binary'i çalıştır
+CMD ["./api"]

@@ -1,0 +1,51 @@
+/* Genel sayfa ayarları */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f2f1;
+  color: #004d40;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #004d40;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #004d40;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Buton ayarları */
+button {
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Sayfalama kontrolleri */
+#pagination-controls {
+  margin-bottom: 1rem;
+}
+
+#pagination-controls button {
+  margin: 0 0.5rem;
+}
