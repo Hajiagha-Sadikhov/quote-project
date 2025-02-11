@@ -47,7 +47,6 @@ To stop the running containers, use the following command.
 
 docker-compose down
 
-
 ```
 
 
@@ -95,9 +94,10 @@ Docker öyrənmək üçün aşağıdakı mənbələr faydalıdır:
   Nginx ilə yüksək performanslı tətbiqləri işlətmək üçün performans optimizasiyası və ən yaxşı təcrübələr haqqında məlumat.
 
 
-## License
-
-This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## 📝 Notes  
 📌 Some parts of this documentation were improved with the help of AI tools to enhance clarity and structure.
+
+## License
+
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
