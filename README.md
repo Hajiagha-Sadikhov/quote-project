@@ -87,7 +87,7 @@ Docker öyrənmək üçün aşağıdakı mənbələr faydalıdır:
 - [Nginx Başlanğıc Təlimatı](https://www.digitalocean.com/community/tutorials/an-intuitive-guide-to-nginx-configuration)  
   Nginx ilə işləməyə başlamaq üçün istifadəçilərə uyğun və asan başa düşülən bir təlimat.
 
-- [Nginx CookBook](https://www.nginx.com/resources/wiki/)  
+- [Nginx wiki](https://www.nginx.com/resources/wiki/)  
   Müxtəlif ssenarilər üçün Nginx-i effektiv şəkildə konfiqurasiya etmək üçün istifadə edilə bilən istifadə hallarının və ən yaxşı təcrübələrin toplusu.
 
 - [Nginx Performansını Tuning Etmək](https://www.nginx.com/blog/tuning-nginx/)  
